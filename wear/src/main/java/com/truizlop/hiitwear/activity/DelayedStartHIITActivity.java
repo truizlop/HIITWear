@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.wearable.activity.ConfirmationActivity;
 import android.support.wearable.view.DelayedConfirmationView;
 import android.view.View;
 
@@ -43,6 +44,16 @@ public class DelayedStartHIITActivity extends Activity implements DelayedConfirm
 
     @Override
     public void onTimerSelected(View view) {
+        showStartSessionCanceled();
         finish();
+    }
+
+    private void showStartSessionCanceled() {
+        Intent intent = new Intent(this, ConfirmationActivity.class);
+        intent.putExtra(ConfirmationActivity.EXTRA_ANIMATION_TYPE,
+                ConfirmationActivity.FAILURE_ANIMATION);
+        intent.putExtra(ConfirmationActivity.EXTRA_MESSAGE,
+                getString(R.string.session_canceled));
+        startActivity(intent);
     }
 }

@@ -27,6 +27,10 @@
         <activity
             android:name=".activity.DelayedStartHIITActivity"
             android:label="@string/start_hiit"/>
+
+        <activity
+            android:name="android.support.wearable.activity.ConfirmationActivity"/>
+
     </application>
 
 </manifest>
