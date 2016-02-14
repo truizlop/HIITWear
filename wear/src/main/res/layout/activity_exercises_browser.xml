@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.wearable.view.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/hiit_background">
@@ -9,29 +10,25 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <android.support.wearable.view.BoxInsetLayout
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_width="match_parent">
+            android:orientation="vertical"
+            app:layout_box="all">
 
-            <LinearLayout
+            <android.support.wearable.view.GridViewPager
+                android:id="@+id/exercise_browser_pager"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
 
-                <android.support.wearable.view.GridViewPager
-                    android:id="@+id/exercise_browser_pager"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"/>
-
-                <android.support.wearable.view.DotsPageIndicator
-                    android:id="@+id/pager_indicator"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="4dp"
-                    android:layout_gravity="center_horizontal"
-                    />
-            </LinearLayout>
-        </android.support.wearable.view.BoxInsetLayout>
+            <android.support.wearable.view.DotsPageIndicator
+                android:id="@+id/pager_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_gravity="center_horizontal"
+                />
+        </LinearLayout>
     </FrameLayout>
-</FrameLayout>
+</android.support.wearable.view.BoxInsetLayout>
