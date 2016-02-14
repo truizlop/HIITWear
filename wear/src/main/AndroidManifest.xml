@@ -26,7 +26,14 @@
 
         <activity
             android:name=".activity.DelayedStartHIITActivity"
-            android:label="@string/start_hiit"/>
+            android:label="@string/start_hiit">
+
+            <intent-filter>
+                <action android:name="vnd.google.fitness.TRACK" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="vnd.google.fitness.activity/other"/>
+            </intent-filter>
+        </activity>
 
         <activity
             android:name="android.support.wearable.activity.ConfirmationActivity"/>
