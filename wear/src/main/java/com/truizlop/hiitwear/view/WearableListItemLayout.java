@@ -34,8 +34,8 @@ public class WearableListItemLayout extends LinearLayout
 
         fadedTextAlpha = getResources()
                             .getInteger(R.integer.action_text_faded_alpha) / 100f;
-        fadedCircleColor = getResources().getColor(R.color.grey);
-        chosenCircleColor = getResources().getColor(R.color.blue);
+        fadedCircleColor = getResources().getColor(R.color.secondary_color);
+        chosenCircleColor = getResources().getColor(R.color.primary_color);
     }
 
     @Override
@@ -49,11 +49,15 @@ public class WearableListItemLayout extends LinearLayout
     public void onCenterPosition(boolean animate) {
         name.setAlpha(1f);
         ((GradientDrawable) circle.getDrawable()).setColor(chosenCircleColor);
+        circle.setScaleX(1);
+        circle.setScaleY(1);
     }
 
     @Override
     public void onNonCenterPosition(boolean animate) {
         ((GradientDrawable) circle.getDrawable()).setColor(fadedCircleColor);
         name.setAlpha(fadedTextAlpha);
+        circle.setScaleX(.8f);
+        circle.setScaleY(.8f);
     }
 }
