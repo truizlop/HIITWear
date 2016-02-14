@@ -38,7 +38,7 @@ public class HomeActivity extends Activity implements WearableListView.ClickList
 
         switch (position){
             case 0:
-                Log.d("Home Activity", "Start HIIT clicked");
+                startHIITWithDelay();
                 break;
             case 1:
                 startExercisesBrowser();
@@ -49,8 +49,13 @@ public class HomeActivity extends Activity implements WearableListView.ClickList
         }
     }
 
+
     @Override
     public void onTopEmptyRegionClick() {}
+
+    private void startHIITWithDelay() {
+        startActivity(DelayedStartHIITActivity.getLaunchIntent(this));
+    }
 
     private void startExercisesBrowser(){
         startActivity(ExercisesBrowserActivity.getLaunchIntent(this));

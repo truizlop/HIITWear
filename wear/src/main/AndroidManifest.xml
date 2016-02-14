@@ -24,6 +24,9 @@
             android:name=".activity.ExercisesBrowserActivity"
             android:label="@string/exercises"/>
 
+        <activity
+            android:name=".activity.DelayedStartHIITActivity"
+            android:label="@string/start_hiit"/>
     </application>
 
 </manifest>
