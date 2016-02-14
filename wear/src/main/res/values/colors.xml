@@ -5,4 +5,5 @@
     <color name="primary_color">#f44336</color>
     <color name="secondary_color">#bdbdbd</color>
     <color name="accent_color">#c62828</color>
+    <color name="black_transparent">#BB000000</color>
 </resources>

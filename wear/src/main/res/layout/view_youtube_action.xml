@@ -8,6 +8,7 @@
     android:color="@color/primary_color"
     android:textColor="@color/white"
     android:src="@drawable/ic_youtube"
+    android:background="@android:color/transparent"
     app:buttonRippleColor="@color/accent_color"
     app:imageScaleMode="fit"
     />

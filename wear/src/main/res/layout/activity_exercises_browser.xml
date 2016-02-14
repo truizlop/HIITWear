@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.wearable.view.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="match_parent"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@drawable/hiit_background">
 
-    <android.support.wearable.view.GridViewPager
-        android:id="@+id/exercise_browser_pager"
+    <FrameLayout
+        android:id="@+id/crossfade_background"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent">
 
-</android.support.wearable.view.BoxInsetLayout>
+        <android.support.wearable.view.BoxInsetLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+
+            <android.support.wearable.view.GridViewPager
+                android:id="@+id/exercise_browser_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </android.support.wearable.view.BoxInsetLayout>
+    </FrameLayout>
+</FrameLayout>
