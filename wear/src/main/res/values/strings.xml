@@ -22,4 +22,7 @@
     <string name="mountain_climber_description">Assume a press up position so your hands are directly under your chest at shoulder width apart with straight arms. Your body should form a straight line from your shoulders to your ankles. Lift your right foot off the floor and slowly raise your knee as close to your chest as you can. Return to the starting position and repeat with your left leg.</string>
     <string name="skipping_description">Jump 1 to 2 inches off floor, giving rope just enough space to slip under feet — only the balls of feet should touch the floor. Keep elbows close to sides as you turn the rope. The movement comes from the wrists and forearms, not the shoulders.</string>
     <string name="view_on_youtube">View %1$s on YouTube</string>
+    <string name="get_ready">Get ready!</string>
+    <string name="hiit_about_to_start">HIIT session is about to start</string>
+    <string name="starting">Starting...</string>
 </resources>

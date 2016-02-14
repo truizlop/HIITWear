@@ -18,7 +18,7 @@
             android:textColor="@color/secondary_color"
             android:textSize="22sp"
             android:fontFamily="sans-serif-condensed-light"
-            android:text="Get ready!"/>
+            android:text="@string/get_ready"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -26,7 +26,7 @@
             android:layout_weight="1"
             android:textColor="@color/text_color"
             android:fontFamily="sans-serif-condensed-light"
-            android:text="HIIT session is about to start"/>
+            android:text="@string/hiit_about_to_start"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -51,7 +51,7 @@
                 android:layout_margin="16dp"
                 android:textColor="@color/black"
                 android:fontFamily="sans-serif-condensed-light"
-                android:text="Cancel"/>
+                android:text="@string/starting"/>
         </LinearLayout>
     </LinearLayout>
 </android.support.wearable.view.BoxInsetLayout>
