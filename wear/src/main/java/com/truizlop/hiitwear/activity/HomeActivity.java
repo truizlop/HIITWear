@@ -41,7 +41,7 @@ public class HomeActivity extends Activity implements WearableListView.ClickList
                 Log.d("Home Activity", "Start HIIT clicked");
                 break;
             case 1:
-                Log.d("Home Activity", "Exercises clicked");
+                startExercisesBrowser();
                 break;
             case 2:
                 Log.d("Home Activity", "Settings clicked");
@@ -51,4 +51,8 @@ public class HomeActivity extends Activity implements WearableListView.ClickList
 
     @Override
     public void onTopEmptyRegionClick() {}
+
+    private void startExercisesBrowser(){
+        startActivity(ExercisesBrowserActivity.getLaunchIntent(this));
+    }
 }

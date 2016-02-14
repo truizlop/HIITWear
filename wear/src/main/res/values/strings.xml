@@ -5,4 +5,21 @@
     <string name="start_hiit">Start HIIT</string>
     <string name="exercises">Exercises</string>
     <string name="settings">Settings</string>
+    <string name="jumping_jacks">Jumping Jacks</string>
+    <string name="burpees">Burpees</string>
+    <string name="squat">Squat</string>
+    <string name="squat_jump">Squat Jump</string>
+    <string name="jumping_lunge">Jumping Lunge</string>
+    <string name="step_up">Step Up</string>
+    <string name="mountain_climber">Mountain Climber</string>
+    <string name="skipping">Skipping</string>
+    <string name="jumping_jacks_description">Jumping to a position with the legs spread wide and the hands touching overhead, sometimes in a clap, and then returning to a position with the feet together and the arms at the sides.</string>
+    <string name="burpees_description">Begin in a standing position. Drop into a squat position with your hands on the ground. Kick your feet back, while keeping your arms extended, then do a push up. Immediately return your feet to the squat position. Jump up from the squat position.</string>
+    <string name="squat_description">The movement is initiated by moving the hips back and bending the knees and hips to lower the torso and accompanying weight, then returning to the upright position.</string>
+    <string name="squat_jump_description">Perform a squat and finish it jumping.</string>
+    <string name="jumping_lunge_description">Begin with normal lunge, with front leg at a 90 degree angle in the squat position and back leg behind you. Squat body explosively up into a jump. Replace your feet in the air, moving back leg in front, and front leg in back. Go straight into lunge with opposite legs. Keep chest and torso upright and engaged throughout entire movement.</string>
+    <string name="step_up_description">To start, place your entire right foot onto the bench or chair. Press through your right heel as you step onto the bench, bringing your left foot to meet your left so you are standing on the bench. Return to the starting position by stepping down with the right foot, then the left so both feet are on the floor.</string>
+    <string name="mountain_climber_description">Assume a press up position so your hands are directly under your chest at shoulder width apart with straight arms. Your body should form a straight line from your shoulders to your ankles. Lift your right foot off the floor and slowly raise your knee as close to your chest as you can. Return to the starting position and repeat with your left leg.</string>
+    <string name="skipping_description">Jump 1 to 2 inches off floor, giving rope just enough space to slip under feet — only the balls of feet should touch the floor. Keep elbows close to sides as you turn the rope. The movement comes from the wrists and forearms, not the shoulders.</string>
+    <string name="view_on_youtube">View %1$s on YouTube</string>
 </resources>
