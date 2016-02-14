@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.wearable.view.CrossfadeDrawable;
+import android.support.wearable.view.DotsPageIndicator;
 import android.support.wearable.view.GridViewPager;
 import android.widget.FrameLayout;
 
@@ -24,6 +25,7 @@ public class ExercisesBrowserActivity extends Activity implements GridViewPager.
 
     @Bind(R.id.exercise_browser_pager) GridViewPager pager;
     @Bind(R.id.crossfade_background) FrameLayout crossfadeBackground;
+    @Bind(R.id.pager_indicator) DotsPageIndicator pagerIndicator;
     private CrossfadeDrawable crossfadeDrawable;
 
     @Override
@@ -44,7 +46,8 @@ public class ExercisesBrowserActivity extends Activity implements GridViewPager.
 
     private void configureExerciseBrowserPager() {
         pager.setAdapter(new ExerciseBrowserPagerAdapter(this, getFragmentManager(), HIIT.getExercises()));
-        pager.setOnPageChangeListener(this);
+        pagerIndicator.setPager(pager);
+        pagerIndicator.setOnPageChangeListener(this);
     }
 
     @Override
@@ -64,7 +67,5 @@ public class ExercisesBrowserActivity extends Activity implements GridViewPager.
     }
 
     @Override
-    public void onPageScrollStateChanged(int state) {
-
-    }
+    public void onPageScrollStateChanged(int state) {}
 }
