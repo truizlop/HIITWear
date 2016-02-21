@@ -26,4 +26,8 @@
     <string name="hiit_about_to_start">HIIT session is about to start</string>
     <string name="starting">Starting&#8230;</string>
     <string name="session_canceled">Session canceled</string>
+    <string name="round">Round %1$d</string>
+    <string name="current_exercise">Current exercise</string>
+    <string name="rest">Rest</string>
+    <string name="next_exercise">Next exercise</string>
 </resources>
