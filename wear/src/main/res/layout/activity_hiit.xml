@@ -102,4 +102,10 @@
             android:src="@drawable/ic_exercises"
             android:layout_gravity="center"/>
     </FrameLayout>
+
+    <android.support.wearable.view.DismissOverlayView
+        android:id="@+id/dismiss_overlay"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"/>
+
 </android.support.wearable.view.BoxInsetLayout>

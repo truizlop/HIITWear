@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Vibrator;
 import android.support.wearable.activity.WearableActivity;
 import android.support.wearable.view.DismissOverlayView;
 import android.view.GestureDetector;
@@ -44,6 +45,7 @@ public class HIITActivity extends WearableActivity {
     private boolean isRest;
     private Handler handler;
     private GestureDetector gestureDetector;
+    private Vibrator vibrator;
 
     private Runnable exerciseTimeUpdate = new Runnable() {
         @Override
@@ -60,6 +62,7 @@ public class HIITActivity extends WearableActivity {
                     handler.postDelayed(restTimeUpdate, 1000);
                 }
             }else {
+                vibrateIfNecessary();
                 showTimeRemaining();
                 handler.postDelayed(this, 1000);
             }
@@ -78,11 +81,20 @@ public class HIITActivity extends WearableActivity {
                 showCurrentExercise();
                 handler.postDelayed(exerciseTimeUpdate, 1000);
             }else{
+                vibrateIfNecessary();
                 showTimeRemaining();
                 handler.postDelayed(this, 1000);
             }
         }
     };
+
+    private void vibrateIfNecessary() {
+        if(timeRemaining == 0){
+            vibrateLong();
+        }else if(timeRemaining < 3){
+            vibrateShort();
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,6 +104,7 @@ public class HIITActivity extends WearableActivity {
 
         setContentView(R.layout.activity_hiit);
         ButterKnife.bind(this);
+        vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
 
         dismissOverlay.setIntroText(R.string.long_press_intro);
         dismissOverlay.showIntroIfNecessary();
@@ -143,6 +156,20 @@ public class HIITActivity extends WearableActivity {
 
     private void showTimeRemaining() {
         timeText.setText(String.format("%d", timeRemaining));
+    }
+
+    private void vibrateShort(){
+        long[] vibrationPattern = {0, 50};
+        //-1 - don't repeat
+        final int indexInPatternToRepeat = -1;
+        vibrator.vibrate(vibrationPattern, indexInPatternToRepeat);
+    }
+
+    private void vibrateLong(){
+        long[] vibrationPattern = {0, 500};
+        //-1 - don't repeat
+        final int indexInPatternToRepeat = -1;
+        vibrator.vibrate(vibrationPattern, indexInPatternToRepeat);
     }
 
     @Override
