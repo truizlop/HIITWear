@@ -49,6 +49,11 @@
         <activity
             android:name="android.support.wearable.activity.ConfirmationActivity"/>
 
+        <activity
+            android:name=".activity.HIITActivity"
+            android:exported="true"
+            android:allowEmbedded="true"
+            android:taskAffinity=""/>
     </application>
 
 </manifest>

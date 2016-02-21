@@ -39,7 +39,12 @@ public class DelayedStartHIITActivity extends Activity implements DelayedConfirm
 
     @Override
     public void onTimerFinished(View view) {
+        startHIIT();
         finish();
+    }
+
+    private void startHIIT() {
+        startActivity(HIITActivity.getLaunchIntent(this));
     }
 
     @Override
