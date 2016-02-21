@@ -59,7 +59,8 @@
             android:name=".activity.HIITActivity"
             android:exported="true"
             android:allowEmbedded="true"
-            android:taskAffinity=""/>
+            android:taskAffinity=""
+            android:theme="@style/Fullscreen"/>
     </application>
 
 </manifest>

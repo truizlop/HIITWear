@@ -5,6 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.wearable.activity.WearableActivity;
+import android.support.wearable.view.DismissOverlayView;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -33,12 +36,14 @@ public class HIITActivity extends WearableActivity {
     @Bind(R.id.exercise_name_text) TextView exerciseNameText;
     @Bind(R.id.icon_frame) View iconFrame;
     @Bind(R.id.icon_image) ImageView iconImage;
+    @Bind(R.id.dismiss_overlay) DismissOverlayView dismissOverlay;
 
     private List<Exercise> exercises;
     private int currentExercise;
     private int timeRemaining;
     private boolean isRest;
     private Handler handler;
+    private GestureDetector gestureDetector;
 
     private Runnable exerciseTimeUpdate = new Runnable() {
         @Override
@@ -87,6 +92,16 @@ public class HIITActivity extends WearableActivity {
 
         setContentView(R.layout.activity_hiit);
         ButterKnife.bind(this);
+
+        dismissOverlay.setIntroText(R.string.long_press_intro);
+        dismissOverlay.showIntroIfNecessary();
+
+        gestureDetector = new GestureDetector(this, new GestureDetector.SimpleOnGestureListener(){
+            @Override
+            public void onLongPress(MotionEvent e) {
+                dismissOverlay.show();
+            }
+        });
 
         currentExercise = 0;
         timeRemaining = 20;
@@ -165,4 +180,8 @@ public class HIITActivity extends WearableActivity {
         }
     }
 
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        return gestureDetector.onTouchEvent(event) || super.onTouchEvent(event);
+    }
 }
