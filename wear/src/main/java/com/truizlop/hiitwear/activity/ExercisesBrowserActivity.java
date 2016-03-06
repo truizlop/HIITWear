@@ -142,10 +142,14 @@ public class ExercisesBrowserActivity extends Activity implements GridViewPager.
                         public void onResult(@NonNull MessageApi.SendMessageResult sendMessageResult) {
                             if (sendMessageResult.getStatus().isSuccess()) {
                                 showConfirmation();
+                            }else{
+                                showErrorOpeningVideo();
                             }
                         }
                     }
             );
+        }else{
+            showErrorOpeningVideo();
         }
     }
 
@@ -155,6 +159,15 @@ public class ExercisesBrowserActivity extends Activity implements GridViewPager.
                 ConfirmationActivity.OPEN_ON_PHONE_ANIMATION);
         intent.putExtra(ConfirmationActivity.EXTRA_MESSAGE,
                 getString(R.string.common_open_on_phone));
+        startActivity(intent);
+    }
+
+    private void showErrorOpeningVideo(){
+        Intent intent = new Intent(this, ConfirmationActivity.class);
+        intent.putExtra(ConfirmationActivity.EXTRA_ANIMATION_TYPE,
+                ConfirmationActivity.FAILURE_ANIMATION);
+        intent.putExtra(ConfirmationActivity.EXTRA_MESSAGE,
+                getString(R.string.could_not_open_video));
         startActivity(intent);
     }
 }

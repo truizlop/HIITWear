@@ -32,4 +32,5 @@
     <string name="next_exercise">Next exercise</string>
     <string name="long_press_intro">Long press to exit</string>
     <string name="created_by">App created by Tomás Ruiz-López</string>
+    <string name="could_not_open_video">Couldn\'t open video</string>
 </resources>
