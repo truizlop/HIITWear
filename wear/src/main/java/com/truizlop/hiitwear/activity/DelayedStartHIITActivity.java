@@ -49,6 +49,7 @@ public class DelayedStartHIITActivity extends Activity implements DelayedConfirm
 
     @Override
     public void onTimerSelected(View view) {
+        delayedConfirmationView.setListener(null);
         showStartSessionCanceled();
         finish();
     }
