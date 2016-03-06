@@ -63,6 +63,13 @@
             android:taskAffinity=""
             android:theme="@style/Fullscreen"/>
 
+        <activity
+            android:name=".activity.CreditsActivity"
+            android:exported="true"
+            android:allowEmbedded="true"
+            android:taskAffinity=""
+            android:label="@string/credits"/>
+
         <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
     </application>
 

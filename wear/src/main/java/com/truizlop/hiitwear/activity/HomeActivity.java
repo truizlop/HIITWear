@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.wearable.view.WatchViewStub;
 import android.support.wearable.view.WearableListView;
-import android.util.Log;
 
 import com.truizlop.hiitwear.R;
 import com.truizlop.hiitwear.adapter.MenuAdapter;
@@ -44,7 +43,7 @@ public class HomeActivity extends Activity implements WearableListView.ClickList
                 startExercisesBrowser();
                 break;
             case 2:
-                Log.d("Home Activity", "Settings clicked");
+                startCredits();
                 break;
         }
     }
@@ -59,5 +58,9 @@ public class HomeActivity extends Activity implements WearableListView.ClickList
 
     private void startExercisesBrowser(){
         startActivity(ExercisesBrowserActivity.getLaunchIntent(this));
+    }
+
+    private void startCredits(){
+        startActivity(CreditsActivity.getLaunchIntent(this));
     }
 }

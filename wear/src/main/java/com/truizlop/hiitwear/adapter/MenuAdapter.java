@@ -8,7 +8,7 @@ import com.truizlop.hiitwear.R;
 
 public class MenuAdapter extends WearableListView.Adapter{
 
-    private final int[] ENTRIES = new int[]{R.string.start_hiit, R.string.exercises, R.string.settings};
+    private final int[] ENTRIES = new int[]{R.string.start_hiit, R.string.exercises, R.string.credits};
     private final int[] ICONS = new int[]{R.drawable.ic_play, R.drawable.ic_exercises, R.drawable.ic_settings};
 
     @Override
