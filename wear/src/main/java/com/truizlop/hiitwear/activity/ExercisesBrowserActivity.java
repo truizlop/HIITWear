@@ -7,6 +7,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.support.wearable.activity.ConfirmationActivity;
 import android.support.wearable.view.CrossfadeDrawable;
 import android.support.wearable.view.DotsPageIndicator;
@@ -72,8 +73,8 @@ public class ExercisesBrowserActivity extends Activity implements GridViewPager.
 
     private void configureCrossfade(){
         crossfadeDrawable = new CrossfadeDrawable();
-        crossfadeDrawable.setBase(new ColorDrawable(getResources().getColor(android.R.color.transparent)));
-        crossfadeDrawable.setFading(new ColorDrawable(getResources().getColor(R.color.black_transparent)));
+        crossfadeDrawable.setBase(new ColorDrawable(ContextCompat.getColor(this, android.R.color.transparent)));
+        crossfadeDrawable.setFading(new ColorDrawable(ContextCompat.getColor(this, R.color.black_transparent)));
         crossfadeBackground.setBackground(crossfadeDrawable);
     }
 
