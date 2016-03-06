@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">HIIT Wear</string>
+    <string name="instructions">Open HIIT Wear on your wearable device or say \"Ok Google, start a workout\"</string>
 </resources>

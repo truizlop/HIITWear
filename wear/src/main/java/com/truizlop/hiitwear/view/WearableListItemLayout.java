@@ -2,6 +2,7 @@ package com.truizlop.hiitwear.view;
 
 import android.content.Context;
 import android.graphics.drawable.GradientDrawable;
+import android.support.v4.content.ContextCompat;
 import android.support.wearable.view.WearableListView;
 import android.util.AttributeSet;
 import android.widget.ImageView;
@@ -34,8 +35,8 @@ public class WearableListItemLayout extends LinearLayout
 
         fadedTextAlpha = getResources()
                             .getInteger(R.integer.action_text_faded_alpha) / 100f;
-        fadedCircleColor = getResources().getColor(R.color.secondary_color);
-        chosenCircleColor = getResources().getColor(R.color.primary_color);
+        fadedCircleColor = ContextCompat.getColor(getContext(), R.color.secondary_color);
+        chosenCircleColor = ContextCompat.getColor(getContext(), R.color.primary_color);
     }
 
     @Override
