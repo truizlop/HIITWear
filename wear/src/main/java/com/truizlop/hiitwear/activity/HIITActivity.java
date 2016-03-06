@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Vibrator;
+import android.support.v4.content.ContextCompat;
 import android.support.wearable.activity.WearableActivity;
 import android.support.wearable.view.DismissOverlayView;
 import android.view.GestureDetector;
@@ -179,8 +180,8 @@ public class HIITActivity extends WearableActivity {
         roundFrame.setBackground(null);
         roundText.getPaint().setAntiAlias(false);
         timeText.getPaint().setAntiAlias(false);
-        cardView.setBackgroundColor(getResources().getColor(android.R.color.transparent));
-        int white = getResources().getColor(R.color.white);
+        cardView.setBackgroundColor(ContextCompat.getColor(this, android.R.color.transparent));
+        int white = ContextCompat.getColor(this, R.color.white);
         exerciseTitleText.setTextColor(white);
         exerciseNameText.getPaint().setAntiAlias(false);
         exerciseNameText.setTextColor(white);
@@ -195,10 +196,10 @@ public class HIITActivity extends WearableActivity {
         roundFrame.setBackgroundResource(R.drawable.white_round_rect);
         roundText.getPaint().setAntiAlias(true);
         timeText.getPaint().setAntiAlias(true);
-        cardView.setBackgroundColor(getResources().getColor(R.color.white));
-        exerciseTitleText.setTextColor(getResources().getColor(R.color.secondary_color));
+        cardView.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+        exerciseTitleText.setTextColor(ContextCompat.getColor(this,  R.color.secondary_color));
         exerciseTitleText.getPaint().setAntiAlias(true);
-        exerciseNameText.setTextColor(getResources().getColor(R.color.text_color));
+        exerciseNameText.setTextColor(ContextCompat.getColor(this, R.color.text_color));
         exerciseNameText.getPaint().setAntiAlias(true);
         if(isRest){
             iconFrame.setBackgroundResource(R.drawable.green_circle);
